@@ -35,7 +35,7 @@ passenger_count = st.multiselect(
 if st.button('Get Fare'):
     params = {
         "pickup_datetime": pickup_datetime,
-        "pickup_latitude": pickup_latitude,s
+        "pickup_latitude": pickup_latitude,
         "pickup_longitude": pickup_longitude,
         "dropoff_latitude": dropoff_latitude,
         "dropoff_longitude": dropoff_longitude,
