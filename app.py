@@ -28,11 +28,13 @@ dropoff_longitude = st.number_input("Dropoff Longitude", value=-73.956, min_valu
 passenger_count = st.multiselect(
     "Passenger Count",
     options=list(range(1, 9)), # allow to select between 1 and 8
-    default=[1]  # initial value as 
+    default=[1], # initial value as 1
+    max_selections=1 
 )
 
 # Button to get prediction
 if st.button('Get Fare'):
+    # Params dictionary with input data
     params = {
         "pickup_datetime": pickup_datetime,
         "pickup_latitude": pickup_latitude,
